@@ -20,6 +20,7 @@ You only need **one secret** for automatic deployment:
 ## 🚀 How It Works
 
 The workflow automatically:
+
 - ✅ Runs type checking
 - ✅ Builds your portfolio
 - ✅ Deploys to Vercel

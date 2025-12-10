@@ -205,9 +205,9 @@ Modify CSS custom properties in `src/routes/layout.css`:
 
 ```css
 @theme {
-  --color-primary-500: oklch(0.62 0.23 270);     /* Primary brand color */
-  --color-accent-500: oklch(0.75 0.19 195);      /* Accent color */
-  /* ... more colors */
+	--color-primary-500: oklch(0.62 0.23 270); /* Primary brand color */
+	--color-accent-500: oklch(0.75 0.19 195); /* Accent color */
+	/* ... more colors */
 }
 ```
 
