@@ -189,9 +189,7 @@
 						href="mailto:thyzeng@gmail.com"
 						class="flex items-center gap-4 p-4 rounded-xl bg-(--bg-primary) hover:bg-(--bg-tertiary) transition-colors group"
 					>
-						<div
-							class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0"
-						>
+						<div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0">
 							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path
 									stroke-linecap="round"
@@ -212,9 +210,7 @@
 					</a>
 
 					<div class="flex items-center gap-4 p-4 rounded-xl bg-(--bg-primary)">
-						<div
-							class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0"
-						>
+						<div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0">
 							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path
 									stroke-linecap="round"
