@@ -10,7 +10,7 @@
 
 **A modern, animated portfolio website showcasing web development projects and skills**
 
-[View Demo](http://localhost:5174) • [Report Bug](https://github.com/h-yzeng/hyzeng-portfolio/issues) • [Request Feature](https://github.com/h-yzeng/hyzeng-portfolio/issues)
+[🌐 Live Site](https://hyzeng-portfolio.vercel.app) • [Report Bug](https://github.com/h-yzeng/hyzeng-portfolio/issues) • [Request Feature](https://github.com/h-yzeng/hyzeng-portfolio/issues)
 
 </div>
 
