@@ -121,21 +121,21 @@
 
 				<!-- [PLACEHOLDER] - Replace this bio with your own story -->
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
-					[I'm passionate about creating beautiful, functional web applications that solve
-					real-world problems. With a keen eye for design and a love for clean code, I bridge the
-					gap between aesthetics and functionality.]
+					I enjoy creating beautiful and functional web applications that solve
+					real-world problems. With a creative eye for design and a love for clean code, I connect the
+					gap between aesthetics and functionality.
 				</p>
 
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
-					[When I'm not coding, you can find me exploring new technologies, contributing to
-					open-source projects, or sharing my knowledge with the developer community. I believe in
-					continuous learning and pushing the boundaries of what's possible on the web.]
+					When I'm not coding, you can find me exploring new technologies, thinking about new
+					projects ideas, or sharing my knowledge with other developers. I believe in
+					continuous learning and pushing the boundaries of what's possible to design.
 				</p>
 
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
-					[What drives me is the ability to turn complex problems into elegant solutions. I'm always
-					excited to take on new challenges and collaborate with like-minded individuals who share
-					my passion for innovation.]
+					What drives me is the ability to turn complex problems into stylish solutions. I'm always
+					excited to take on new challenges and collaborate with other creatives who share
+					my passion for designing.
 				</p>
 
 				<!-- Quick Info -->

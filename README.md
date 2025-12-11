@@ -199,19 +199,64 @@ Edit the content in each section component:
 - `src/lib/components/sections/Experience.svelte` - Work history and education
 - `src/lib/components/sections/Contact.svelte` - Contact information
 
-### 2. **Theme Colors**
+### 2. **Project Images**
+
+Add screenshots of your projects:
+
+1. Save project images as `.jpg` or `.png` files
+2. Place them in `static/images/projects/`
+3. Update image paths in `src/lib/components/sections/Projects.svelte`
+4. Recommended size: 1200x800px for best quality
+5. Example filenames: `campus-night-market.jpg`, `moodboard.jpg`, `task-manager.jpg`
+
+### 3. **Resume Setup**
+
+Add your resume PDF to enable the download button:
+
+1. Save your resume as `Henry_Zeng_Resume.pdf`
+2. Place it in the `static/resume/` directory
+3. Keep file size under 2MB for optimal loading
+
+### 4. **Contact Form Setup**
+
+Connect the contact form to FormSpree:
+
+1. Sign up at [https://formspree.io/](https://formspree.io/) (free tier available)
+2. Create a new form and get your form ID
+3. Open `src/lib/components/sections/Contact.svelte`
+4. Replace `YOUR_FORM_ID` with your actual FormSpree form ID
+5. Test the form to ensure emails are being sent
+
+### 5. **Google Analytics Setup**
+
+Track your portfolio visitors:
+
+1. Create a Google Analytics 4 property at [https://analytics.google.com/](https://analytics.google.com/)
+2. Get your Measurement ID (format: `G-XXXXXXXXXX`)
+3. Open `src/app.html`
+4. Replace both instances of `GA_MEASUREMENT_ID` with your actual Measurement ID
+
+### 6. **SEO Image Setup**
+
+Create an Open Graph image for social media sharing:
+
+1. Design a 1200x630px image showcasing your brand
+2. Save it as `og-image.jpg` in the `static/` directory
+3. This image appears when your portfolio is shared on social media
+
+### 7. **Theme Colors**
 
 Modify CSS custom properties in `src/routes/layout.css`:
 
 ```css
 @theme {
-	--color-primary-500: oklch(0.62 0.23 270); /* Primary brand color */
-	--color-accent-500: oklch(0.75 0.19 195); /* Accent color */
-	/* ... more colors */
+  --color-primary-500: oklch(0.62 0.23 270); /* Primary brand color */
+  --color-accent-500: oklch(0.75 0.19 195); /* Accent color */
+  /* ... more colors */
 }
 ```
 
-### 3. **Fonts**
+### 8. **Fonts**
 
 Change Google Fonts in `src/routes/+layout.svelte`:
 
@@ -219,7 +264,7 @@ Change Google Fonts in `src/routes/+layout.svelte`:
 <link href="https://fonts.googleapis.com/css2?family=Your+Font" />
 ```
 
-### 4. **Animations**
+### 9. **Animations**
 
 Adjust animation settings in `src/lib/animations.ts`:
 

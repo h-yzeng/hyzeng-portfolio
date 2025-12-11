@@ -110,18 +110,28 @@
 		isSubmitting = true;
 		submitStatus = 'idle';
 
-		// [CUSTOMIZATION] - Replace with your actual form submission logic
-		// Example: Connect to a serverless function, Formspree, or email service
 		try {
-			// Simulate form submission
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+			// FormSpree endpoint - Replace YOUR_FORM_ID with your actual FormSpree form ID
+			// Get your form ID from: https://formspree.io/
+			const response = await fetch('https://formspree.io/f/xjknpbge', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					message: formData.message,
+					_subject: `Portfolio Contact from ${formData.name}`
+				})
+			});
 
-			// For now, just log the data and show success
-			console.log('Form submitted:', formData);
-			submitStatus = 'success';
-
-			// Reset form
-			formData = { name: '', email: '', message: '' };
+			if (response.ok) {
+				submitStatus = 'success';
+				formData = { name: '', email: '', message: '' };
+			} else {
+				submitStatus = 'error';
+			}
 		} catch {
 			submitStatus = 'error';
 		} finally {

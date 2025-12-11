@@ -15,31 +15,31 @@
 		{
 			name: 'Campus Night Market',
 			description:
-				'A modern web application for campus late-night food exchange, built specifically for IIT students.',
+				'Campus Night Market is a campus late-night food exchange, built specifically for IIT students.',
 			tech: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'Firebase'],
 			github: 'https://github.com/h-yzeng/campus-nightmarket',
-			live: '', // [ADD LIVE DEMO LINK IF AVAILABLE]
-			image: '' // [ADD PROJECT SCREENSHOT PATH]
+			live: 'https://campus-nightmarket.vercel.app/', 
+			image: '/images/projects/campus-night-market.jpg' 
 		},
 		{
 			name: 'MoodBoard',
 			description:
-				'A web-based mood tracking app that helps users log daily emotions, reflect on experiences, and visualize mood trends.',
+				'MoodBoard is a mood tracking app that helps users log daily emotions, reflect on experiences, and visualize mood trends.',
 			tech: ['React', 'JavaScript', 'TailwindCSS', 'Vite'],
 			github: 'https://github.com/h-yzeng/Moodboard',
-			live: '', // [ADD LIVE DEMO LINK IF AVAILABLE]
-			image: '' // [ADD PROJECT SCREENSHOT PATH]
+			live: 'https://mood-board-tracking-app.vercel.app/', 
+			image: '/images/projects/moodboard.jpg'
 		},
 		{
-			name: 'Task Manager',
+			name: 'TaskFlow',
 			description:
-				'Task Manager lets you quickly organize, track, and update your to-do items from any device.',
+				'TaskFlow lets you quickly organize, track, and update your to-do items from any device.',
 			tech: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Vercel Postgres'],
-			github: 'https://github.com/h-yzeng/task-manager',
-			live: '', // [ADD LIVE DEMO LINK IF AVAILABLE]
-			image: '' // [ADD PROJECT SCREENSHOT PATH]
+			github: 'https://github.com/h-yzeng/taskflow',
+			live: 'https://taskflow-manager-app.vercel.app/',
+			image: '/images/projects/taskflow.jpg' // Add your screenshot to static/images/projects/
 		}
-		// [ADD MORE PROJECTS HERE]
+		// Add more projects here following the same format
 	];
 
 	onMount(() => {

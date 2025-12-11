@@ -13,7 +13,8 @@
 		{ href: '#skills', label: 'Skills' },
 		{ href: '#projects', label: 'Projects' },
 		{ href: '#experience', label: 'Experience' },
-		{ href: '#contact', label: 'Contact' }
+		{ href: '#contact', label: 'Contact' },
+		{ href: '/resume/Henry_Zeng_Resume.pdf', label: 'Resume', isDownload: true }
 	];
 
 	function handleScroll() {
@@ -67,6 +68,7 @@
 				{#each navLinks as link}
 					<a
 						href={link.href}
+						download={link.isDownload || undefined}
 						class="text-sm font-medium text-(--text-secondary) hover:text-primary-500 transition-colors relative group focus:outline-none focus:text-primary-500"
 					>
 						{link.label}
@@ -129,6 +131,7 @@
 					{#each navLinks as link}
 						<a
 							href={link.href}
+							download={link.isDownload || undefined}
 							onclick={closeMobileMenu}
 							class="block py-3 text-lg font-medium text-(--text-secondary) hover:text-primary-500 transition-colors focus:outline-none focus:text-primary-500"
 						>
