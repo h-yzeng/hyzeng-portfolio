@@ -55,7 +55,10 @@
 		{#if project.image}
 			<img
 				src={project.image}
-				alt="{project.name} screenshot"
+				alt="{project.name} project screenshot showing the application interface"
+				width="800"
+				height="450"
+				loading="lazy"
 				class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
 			/>
 		{:else}
@@ -88,12 +91,12 @@
 
 		<!-- Hover Overlay -->
 		<div
-			class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+			class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
 		></div>
 
 		<!-- Quick Links on Hover -->
 		<div
-			class="absolute bottom-4 left-4 right-4 flex gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+			class="absolute bottom-4 left-4 right-4 flex gap-3 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300"
 		>
 			{#if project.live}
 				<a

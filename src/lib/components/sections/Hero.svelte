@@ -59,22 +59,8 @@
 					'-=0.3'
 				);
 
-			// Scroll indicator bounce
-			scrollIndicatorBounce('.scroll-indicator');
-
-			// Floating shapes animation (subtle)
-			gsap.to('.floating-shape', {
-				y: 'random(-15, 15)',
-				x: 'random(-8, 8)',
-				duration: 'random(5, 8)',
-				repeat: -1,
-				yoyo: true,
-				ease: 'sine.inOut',
-				stagger: {
-					each: 0.8,
-					from: 'random'
-				}
-			});
+			// Note: Scroll indicator and floating shapes use CSS animations for better performance
+			// See layout.css for @keyframes bounce-slow and float
 		});
 	});
 
@@ -93,12 +79,15 @@
 	<div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
 		<div
 			class="floating-shape absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary-500/8 blur-3xl"
+			style="animation: float 6s ease-in-out infinite;"
 		></div>
 		<div
 			class="floating-shape absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-primary-400/8 blur-3xl"
+			style="animation: float 8s ease-in-out infinite 1s;"
 		></div>
 		<div
 			class="floating-shape absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-primary-300/8 blur-2xl"
+			style="animation: float 7s ease-in-out infinite 0.5s;"
 		></div>
 	</div>
 
@@ -227,6 +216,7 @@
 		<a
 			href="#about"
 			class="scroll-indicator flex flex-col items-center gap-2 text-(--text-tertiary) hover:text-primary-500 transition-colors"
+			style="animation: bounce-slow 2s ease-in-out infinite;"
 			aria-label="Scroll to About section"
 		>
 			<span class="text-sm font-medium">Scroll</span>

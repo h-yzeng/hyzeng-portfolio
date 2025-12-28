@@ -65,19 +65,8 @@
 				}
 			);
 
-			// Tech icons floating animation
-			gsap.to('.tech-icon', {
-				y: 'random(-15, 15)',
-				rotation: 'random(-5, 5)',
-				duration: 'random(3, 5)',
-				repeat: -1,
-				yoyo: true,
-				ease: 'sine.inOut',
-				stagger: {
-					each: 0.3,
-					from: 'random'
-				}
-			});
+			// Note: Tech icons use CSS animation for better performance
+			// See layout.css for @keyframes float
 		});
 	});
 
@@ -244,6 +233,7 @@
                   top: {20 + Math.sin(i * 1.2) * 30}%;
                   left: {20 + Math.cos(i * 1.2) * 30}%;
                   transform: rotate({i * 15}deg);
+                  animation: float {3 + (i % 3)}s ease-in-out infinite {i * 0.3}s;
                 "
 							>
 								<span class="text-xs font-bold" style="color: {icon.color}"

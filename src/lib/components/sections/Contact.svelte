@@ -3,6 +3,7 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { createAnimationContext, prefersReducedMotion, magneticButton } from '$lib/animations';
+	import { SOCIAL_LINKS } from '$lib/config/social';
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -111,9 +112,9 @@
 		submitStatus = 'idle';
 
 		try {
-			// FormSpree endpoint - Replace YOUR_FORM_ID with your actual FormSpree form ID
-			// Get your form ID from: https://formspree.io/
-			const response = await fetch('https://formspree.io/f/xjknpbge', {
+			// FormSpree endpoint using environment variable
+			const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
+			const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -138,24 +139,6 @@
 			isSubmitting = false;
 		}
 	}
-
-	const socialLinks = [
-		{
-			name: 'GitHub',
-			href: 'https://github.com/h-yzeng',
-			icon: 'github'
-		},
-		{
-			name: 'LinkedIn',
-			href: 'https://www.linkedin.com/in/henry-zeng-/',
-			icon: 'linkedin'
-		},
-		{
-			name: 'Email',
-			href: 'mailto:thyzeng@gmail.com',
-			icon: 'email'
-		}
-	];
 </script>
 
 <section
@@ -274,13 +257,13 @@
 						Follow me
 					</h4>
 					<div class="flex gap-4">
-						{#each socialLinks as link}
+						{#each SOCIAL_LINKS as link}
 							<a
 								href={link.href}
 								target="_blank"
 								rel="noopener noreferrer"
 								class="social-link w-12 h-12 rounded-xl bg-(--bg-primary) flex items-center justify-center text-(--text-secondary) hover:text-white hover:bg-primary-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
-								aria-label={link.name}
+								aria-label={link.ariaLabel}
 							>
 								{#if link.icon === 'github'}
 									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

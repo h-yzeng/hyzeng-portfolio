@@ -3,19 +3,11 @@
 	import { gsap } from 'gsap';
 	import { prefersReducedMotion } from '$lib/animations';
 	import ThemeToggle from '$lib/components/ui/ThemeToggle.svelte';
+	import { MAIN_NAV } from '$lib/config/navigation';
 
 	let isScrolled = $state(false);
 	let isMobileMenuOpen = $state(false);
 	let headerElement: HTMLElement;
-
-	const navLinks = [
-		{ href: '#about', label: 'About' },
-		{ href: '#skills', label: 'Skills' },
-		{ href: '#projects', label: 'Projects' },
-		{ href: '#education', label: 'Education' },
-		{ href: '#currently-learning', label: 'Learning' },
-		{ href: '/resume/Henry_Zeng_2025Resume.pdf', label: 'Resume', isDownload: true }
-	];
 
 	function handleScroll() {
 		isScrolled = window.scrollY > 50;
@@ -65,7 +57,7 @@
 
 			<!-- Desktop Navigation -->
 			<div class="hidden md:flex items-center gap-8">
-				{#each navLinks as link}
+				{#each MAIN_NAV as link}
 					<a
 						href={link.href}
 						download={link.isDownload || undefined}
@@ -128,7 +120,7 @@
 				class="md:hidden absolute top-full left-0 right-0 bg-(--bg-primary)/95 backdrop-blur-lg border-t border-(--border-color) shadow-xl"
 			>
 				<div class="container-custom py-6 space-y-4">
-					{#each navLinks as link}
+					{#each MAIN_NAV as link}
 						<a
 							href={link.href}
 							download={link.isDownload || undefined}

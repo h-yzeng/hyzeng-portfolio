@@ -17,6 +17,34 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 /**
+ * Animation Constants
+ * Centralized animation values for consistency across the portfolio
+ */
+export const ANIMATION_DURATIONS = {
+	INSTANT: 0.1,
+	FAST: 0.3,
+	NORMAL: 0.6,
+	SLOW: 0.8,
+	SLOWER: 1.2
+} as const;
+
+export const ANIMATION_DELAYS = {
+	SHORT: 0.1,
+	MEDIUM: 0.2,
+	LONG: 0.3
+} as const;
+
+export const ANIMATION_STAGGER = {
+	FAST: 0.05,
+	NORMAL: 0.1,
+	MEDIUM: 0.15,
+	SLOW: 0.2
+} as const;
+
+export const SCROLL_TRIGGER_START = 'top 80%' as const;
+export const SCROLL_TRIGGER_END = 'bottom 20%' as const;
+
+/**
  * Check if user prefers reduced motion
  */
 export function prefersReducedMotion(): boolean {

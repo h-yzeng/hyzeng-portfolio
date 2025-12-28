@@ -28,16 +28,9 @@
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="canonical" href="https://hyzeng-portfolio.vercel.app/" />
 		
-		<!-- Google Analytics - Replace GA_MEASUREMENT_ID with your actual ID -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JCFBSFJ8ZV"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-JCFBSFJ8ZV');
-		</script>
 		
-		%sveltekit.head%
+		<!-- Google Analytics now loaded via Analytics.svelte component using environment variables -->
+	%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div class="contents">%sveltekit.body%</div>

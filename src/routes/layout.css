@@ -177,7 +177,7 @@
 	--bg-tertiary: #334155;
 	--text-primary: #f8fafc;
 	--text-secondary: #cbd5e1;
-	--text-tertiary: #94a3b8;
+	--text-tertiary: #cbd5e1; /* Improved contrast for WCAG AA compliance */
 	--border-color: #334155;
 	--shadow-color: rgba(0, 0, 0, 0.4);
 
@@ -247,6 +247,38 @@ body {
 /* ============================================
    UTILITY CLASSES
    ============================================ */
+
+/* Screen reader only - hide visually but keep accessible to screen readers */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.sr-only:focus {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	width: auto;
+	height: auto;
+	padding: 1rem 1.5rem;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	border: 2px solid var(--color-baby-blue);
+	border-radius: 0.5rem;
+	z-index: 9999;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
 
 .gradient-text {
 	color: var(--color-navy);
