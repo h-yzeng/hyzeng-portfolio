@@ -46,7 +46,7 @@
 		lg: 'px-10 py-5 text-lg'
 	};
 
-	const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+	const classes = $derived(`${baseClasses} ${variantClasses[variant]} ${className}`);
 </script>
 
 {#if href}

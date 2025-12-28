@@ -9,6 +9,7 @@ node_modules
 /build
 .vscode/
 .vscode
+.claude/
 
 # OS
 .DS_Store

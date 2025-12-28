@@ -33,7 +33,7 @@
 		}
 	};
 
-	const iconData = icons[type];
+	const iconData = $derived(icons[type]);
 </script>
 
 <svg
