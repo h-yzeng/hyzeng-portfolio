@@ -1,9 +1,25 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { navigating } from '$app/stores';
 	import './layout.css';
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 
 	let { children } = $props();
+	let isLoading = $state(false);
+	let showContent = $state(false);
+
+	// Handle navigation loading state
+	$effect(() => {
+		isLoading = !!$navigating;
+	});
+
+	// Page load animation
+	onMount(() => {
+		setTimeout(() => {
+			showContent = true;
+		}, 100);
+	});
 </script>
 
 <svelte:head>
@@ -43,7 +59,19 @@
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </svelte:head>
 
-<div class="min-h-screen flex flex-col">
+<!-- Loading Bar -->
+{#if isLoading}
+	<div
+		class="fixed top-0 left-0 right-0 h-1 bg-primary-500 z-50"
+		role="progressbar"
+		aria-label="Loading"
+		aria-busy="true"
+	>
+		<div class="h-full w-1/3 bg-primary-400 animate-pulse"></div>
+	</div>
+{/if}
+
+<div class="min-h-screen flex flex-col {showContent ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500">
 	<Header />
 	<main class="flex-1">
 		{@render children()}

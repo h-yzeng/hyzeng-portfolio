@@ -2,8 +2,9 @@
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import About from '$lib/components/sections/About.svelte';
 	import Skills from '$lib/components/sections/Skills.svelte';
+	import CurrentlyLearning from '$lib/components/sections/CurrentlyLearning.svelte';
 	import Projects from '$lib/components/sections/Projects.svelte';
-	import Experience from '$lib/components/sections/Experience.svelte';
+	import Education from '$lib/components/sections/Education.svelte';
 	import Contact from '$lib/components/sections/Contact.svelte';
 </script>
 
@@ -58,5 +59,6 @@
 <About />
 <Skills />
 <Projects />
-<Experience />
+<Education />
+<CurrentlyLearning />
 <Contact />

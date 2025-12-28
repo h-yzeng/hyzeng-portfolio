@@ -9,6 +9,7 @@
 
 	let projectsSection: HTMLElement;
 	let ctx: gsap.Context;
+	let selectedFilter = $state('All');
 
 	// [CUSTOMIZATION] - Update project details here
 	const projects = [
@@ -41,6 +42,25 @@
 		}
 		// Add more projects here following the same format
 	];
+
+	// Extract all unique technologies
+	const allTechs = Array.from(new Set(projects.flatMap((p) => p.tech)));
+	const filters = ['All', ...allTechs];
+
+	// Filter projects based on selected technology
+	$effect(() => {
+		if (selectedFilter === 'All') {
+			filteredProjects = projects;
+		} else {
+			filteredProjects = projects.filter((p) => p.tech.includes(selectedFilter));
+		}
+	});
+
+	let filteredProjects = $state(projects);
+
+	function setFilter(filter: string) {
+		selectedFilter = filter;
+	}
 
 	onMount(() => {
 		if (prefersReducedMotion()) return;
@@ -109,12 +129,37 @@
 			</p>
 		</div>
 
-		<!-- Projects Grid -->
-		<div class="projects-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each projects as project}
-				<ProjectCard {project} />
+		<!-- Technology Filters -->
+		<div class="mb-12 flex flex-wrap justify-center gap-3" role="group" aria-label="Filter projects by technology">
+			{#each filters as filter}
+				<button
+					onclick={() => setFilter(filter)}
+					class="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 {selectedFilter ===
+					filter
+						? 'bg-primary-500 text-white shadow-lg scale-105'
+						: 'bg-(--bg-primary) text-(--text-secondary) hover:bg-primary-500/10 hover:text-primary-500'}"
+					aria-pressed={selectedFilter === filter}
+				>
+					{filter}
+				</button>
 			{/each}
 		</div>
+
+		<!-- Projects Grid with transition -->
+		<div class="projects-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{#each filteredProjects as project (project.name)}
+				<div class="project-card">
+					<ProjectCard {project} />
+				</div>
+			{/each}
+		</div>
+
+		<!-- No results message -->
+		{#if filteredProjects.length === 0}
+			<div class="text-center py-16">
+				<p class="text-xl text-(--text-secondary)">No projects found with this technology.</p>
+			</div>
+		{/if}
 
 		<!-- View More Button -->
 		<div class="text-center mt-12">

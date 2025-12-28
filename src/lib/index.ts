@@ -3,7 +3,7 @@ export { default as Hero } from './components/sections/Hero.svelte';
 export { default as About } from './components/sections/About.svelte';
 export { default as Skills } from './components/sections/Skills.svelte';
 export { default as Projects } from './components/sections/Projects.svelte';
-export { default as Experience } from './components/sections/Experience.svelte';
+export { default as Education } from './components/sections/Education.svelte';
 export { default as Contact } from './components/sections/Contact.svelte';
 
 // Layout Components

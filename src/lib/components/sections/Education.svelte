@@ -6,7 +6,7 @@
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	let experienceSection: HTMLElement;
+	let educationSection: HTMLElement;
 	let ctx: gsap.Context;
 
 	// [CUSTOMIZATION] - Update your education here
@@ -39,10 +39,10 @@
 	onMount(() => {
 		if (prefersReducedMotion()) return;
 
-		ctx = createAnimationContext(experienceSection, () => {
+		ctx = createAnimationContext(educationSection, () => {
 			// Section title animation
 			gsap.fromTo(
-				'.experience-title',
+				'.education-title',
 				{ opacity: 0, y: 30 },
 				{
 					opacity: 1,
@@ -50,7 +50,7 @@
 					duration: 0.8,
 					ease: 'power3.out',
 					scrollTrigger: {
-						trigger: '.experience-title',
+						trigger: '.education-title',
 						start: 'top 85%',
 						toggleActions: 'play none none reverse'
 					}
@@ -116,17 +116,17 @@
 </script>
 
 <section
-	bind:this={experienceSection}
-	id="experience"
+	bind:this={educationSection}
+	id="education"
 	class="section-padding"
-	aria-labelledby="experience-heading"
+	aria-labelledby="education-heading"
 >
 	<div class="container-custom">
 		<!-- Section Title -->
 		<div class="text-center mb-16">
 			<h2
-				id="experience-heading"
-				class="experience-title text-4xl md:text-5xl font-display font-bold mb-4"
+				id="education-heading"
+				class="education-title text-4xl md:text-5xl font-display font-bold mb-4"
 			>
 				My <span class="gradient-text">Education</span>
 			</h2>
