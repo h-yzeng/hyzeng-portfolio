@@ -107,7 +107,7 @@
 			<h2 id="about-heading" class="about-title text-4xl md:text-5xl font-display font-bold mb-4">
 				About <span class="gradient-text">Me</span>
 			</h2>
-			<div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+			<div class="w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
 		</div>
 
 		<!-- Content Grid -->
@@ -181,10 +181,11 @@
 				</div>
 
 				<!-- Download Resume Button -->
-				<div class="pt-4">
+				<div class="pt-4 flex gap-4">
 					<a
-						href="#contact"
-						class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary-500 text-primary-500 font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+						href="/resume/Henry_Zeng_2025Resume.pdf"
+						download
+						class="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-bg text-white font-semibold hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 					>
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path
@@ -194,6 +195,12 @@
 								d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
 							/>
 						</svg>
+						Download Resume
+					</a>
+					<a
+						href="#contact"
+						class="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary-500 text-primary-500 font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+					>
 						Get In Touch
 					</a>
 				</div>
@@ -203,7 +210,7 @@
 			<div class="about-graphic relative">
 				<!-- Abstract Shape Container -->
 				<div
-					class="relative aspect-square max-w-md mx-auto bg-linear-to-br from-primary-500/10 to-accent-500/10 rounded-3xl p-8"
+					class="relative aspect-square max-w-md mx-auto bg-primary-500/5 rounded-3xl p-8"
 				>
 					<!-- Decorative Border -->
 					<div class="absolute inset-0 rounded-3xl gradient-border"></div>
@@ -249,7 +256,7 @@
 					<!-- Decorative Dots -->
 					<div
 						class="absolute -bottom-4 -right-4 w-24 h-24 opacity-20"
-						style="background-image: radial-gradient(circle, var(--gradient-start) 2px, transparent 2px); background-size: 12px 12px;"
+						style="background-image: radial-gradient(circle, var(--color-baby-blue) 2px, transparent 2px); background-size: 12px 12px;"
 						aria-hidden="true"
 					></div>
 				</div>

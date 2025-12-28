@@ -8,31 +8,31 @@
 
 /* Theme CSS Custom Properties */
 @theme {
-	/* Color Palette - Primary */
-	--color-primary-50: #f0f9ff;
-	--color-primary-100: #e0f2fe;
-	--color-primary-200: #bae6fd;
-	--color-primary-300: #7dd3fc;
-	--color-primary-400: #38bdf8;
-	--color-primary-500: #0ea5e9;
-	--color-primary-600: #0284c7;
-	--color-primary-700: #0369a1;
-	--color-primary-800: #075985;
-	--color-primary-900: #0c4a6e;
-	--color-primary-950: #082f49;
+	/* Color Palette - Primary (Navy Blue) */
+	--color-primary-50: #eff6ff;
+	--color-primary-100: #dbeafe;
+	--color-primary-200: #bfdbfe;
+	--color-primary-300: #93c5fd;
+	--color-primary-400: #60a5fa;
+	--color-primary-500: #3b82f6;
+	--color-primary-600: #2563eb;
+	--color-primary-700: #1d4ed8;
+	--color-primary-800: #1e3a8a;
+	--color-primary-900: #1e3a8a;
+	--color-primary-950: #172554;
 
-	/* Color Palette - Accent */
-	--color-accent-50: #fdf4ff;
-	--color-accent-100: #fae8ff;
-	--color-accent-200: #f5d0fe;
-	--color-accent-300: #f0abfc;
-	--color-accent-400: #e879f9;
-	--color-accent-500: #d946ef;
-	--color-accent-600: #c026d3;
-	--color-accent-700: #a21caf;
-	--color-accent-800: #86198f;
-	--color-accent-900: #701a75;
-	--color-accent-950: #4a044e;
+	/* Color Palette - Accent (Baby Blue) */
+	--color-accent-50: #eff6ff;
+	--color-accent-100: #dbeafe;
+	--color-accent-200: #bfdbfe;
+	--color-accent-300: #93c5fd;
+	--color-accent-400: #60a5fa;
+	--color-accent-500: #3b82f6;
+	--color-accent-600: #2563eb;
+	--color-accent-700: #1d4ed8;
+	--color-accent-800: #1e40af;
+	--color-accent-900: #1e3a8a;
+	--color-accent-950: #172554;
 
 	/* Fonts */
 	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -96,6 +96,55 @@
 			transform: translateY(-20px);
 		}
 	}
+
+	@keyframes pulse-glow {
+		0%,
+		100% {
+			box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+		}
+		50% {
+			box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+		}
+	}
+
+	@keyframes slide-in-right {
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slide-in-left {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes scale-in {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	/* Animation utilities */
+	--animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+	--animate-slide-in-right: slide-in-right 0.6s ease-out forwards;
+	--animate-slide-in-left: slide-in-left 0.6s ease-out forwards;
+	--animate-scale-in: scale-in 0.5s ease-out forwards;
 }
 
 /* ============================================
@@ -113,9 +162,10 @@
 	--border-color: #e2e8f0;
 	--shadow-color: rgba(0, 0, 0, 0.1);
 
-	/* Gradient Colors */
-	--gradient-start: #0ea5e9;
-	--gradient-end: #d946ef;
+	/* Solid Colors - Navy & Baby Blue */
+	--color-navy: #1e3a8a;
+	--color-baby-blue: #60a5fa;
+	--color-light-blue: #93c5fd;
 
 	color-scheme: light;
 }
@@ -174,23 +224,23 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--gradient-start);
+	background: var(--color-baby-blue);
 	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--gradient-end);
+	background: var(--color-navy);
 }
 
 /* Selection styling */
 ::selection {
-	background-color: var(--gradient-start);
+	background-color: var(--color-baby-blue);
 	color: white;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-	outline: 2px solid var(--gradient-start);
+	outline: 2px solid var(--color-baby-blue);
 	outline-offset: 2px;
 }
 
@@ -199,35 +249,20 @@ body {
    ============================================ */
 
 .gradient-text {
-	background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	color: var(--color-navy);
+}
+
+.dark .gradient-text {
+	color: var(--color-baby-blue);
 }
 
 .gradient-bg {
-	background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+	background: var(--color-navy);
 }
 
 .gradient-border {
 	position: relative;
-}
-
-.gradient-border::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	padding: 2px;
-	border-radius: inherit;
-	background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-	-webkit-mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	-webkit-mask-composite: xor;
-	mask-composite: exclude;
+	border: 2px solid var(--color-baby-blue);
 }
 
 .glass {

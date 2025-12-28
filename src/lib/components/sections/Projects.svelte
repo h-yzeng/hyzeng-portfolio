@@ -103,7 +103,7 @@
 			>
 				Featured <span class="gradient-text">Projects</span>
 			</h2>
-			<div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+			<div class="w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
 			<p class="mt-6 text-lg text-(--text-secondary) max-w-2xl mx-auto">
 				A selection of projects I've built to solve real problems and explore new technologies
 			</p>

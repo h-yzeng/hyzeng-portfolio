@@ -9,45 +9,32 @@
 	let experienceSection: HTMLElement;
 	let ctx: gsap.Context;
 
-	// [CUSTOMIZATION] - Update your experience and education here
-	const experiences = [
-		{
-			type: 'experience',
-			title: '[Job Title]',
-			organization: '[Company Name]',
-			location: '[City, State]',
-			period: '[Start Date] - [End Date]',
-			description: [
-				'[Responsibility or achievement 1]',
-				'[Responsibility or achievement 2]',
-				'[Responsibility or achievement 3]'
-			]
-		},
-		{
-			type: 'experience',
-			title: '[Job Title]',
-			organization: '[Company Name]',
-			location: '[City, State]',
-			period: '[Start Date] - [End Date]',
-			description: ['[Responsibility or achievement 1]', '[Responsibility or achievement 2]']
-		}
-		// [ADD MORE EXPERIENCES HERE]
-	];
-
+	// [CUSTOMIZATION] - Update your education here
 	const education = [
 		{
 			type: 'education',
-			title: '[Degree Name]',
-			organization: '[University Name]',
-			location: '[City, State]',
-			period: '[Start Year] - [End Year]',
-			description: ['[Relevant coursework, achievements, or activities]', '[GPA if noteworthy]']
+			title: 'Master of Information Technology and Management',
+			organization: 'Illinois Institute of Technology - Dual Degree Program',
+			location: 'Chicago, IL',
+			period: 'Expected May 2026',
+			description: ['GPA: 4.00']
+		},
+		{
+			type: 'education',
+			title: 'Bachelor of Information Technology and Management',
+			organization: 'Illinois Institute of Technology',
+			location: 'Chicago, IL',
+			period: 'Current',
+			description: [
+				'GPA: 3.7',
+				'Relevant Coursework: Data Structures and Algorithms, Full-Stack Web Development, Service-Oriented Architectures, Web Systems Integration'
+			]
 		}
 		// [ADD MORE EDUCATION HERE]
 	];
 
-	// Combine and sort by date (most recent first)
-	const timeline = [...experiences, ...education];
+	// Education timeline
+	const timeline = education;
 
 	onMount(() => {
 		if (prefersReducedMotion()) return;
@@ -141,11 +128,11 @@
 				id="experience-heading"
 				class="experience-title text-4xl md:text-5xl font-display font-bold mb-4"
 			>
-				Experience & <span class="gradient-text">Education</span>
+				My <span class="gradient-text">Education</span>
 			</h2>
-			<div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+			<div class="w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
 			<p class="mt-6 text-lg text-(--text-secondary) max-w-2xl mx-auto">
-				My professional journey and academic background
+				My academic journey and achievements
 			</p>
 		</div>
 
@@ -153,7 +140,7 @@
 		<div class="timeline-container relative max-w-4xl mx-auto">
 			<!-- Vertical Line -->
 			<div
-				class="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary-500 via-accent-500 to-primary-500 origin-top"
+				class="timeline-line absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-500 origin-top"
 				aria-hidden="true"
 			></div>
 
@@ -167,7 +154,7 @@
 					>
 						<!-- Timeline Dot -->
 						<div
-							class="timeline-dot absolute left-4 md:left-1/2 w-4 h-4 -translate-x-1/2 rounded-full gradient-bg ring-4 ring-(--bg-primary) z-10"
+							class="timeline-dot absolute left-4 md:left-1/2 w-4 h-4 -translate-x-1/2 rounded-full bg-primary-500 ring-4 ring-(--bg-primary) z-10"
 							aria-hidden="true"
 						></div>
 
@@ -182,12 +169,9 @@
 							>
 								<!-- Type Badge -->
 								<span
-									class="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 {item.type ===
-									'experience'
-										? 'bg-primary-500/10 text-primary-500'
-										: 'bg-accent-500/10 text-accent-500'}"
+									class="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 bg-primary-500/10 text-primary-500"
 								>
-									{item.type === 'experience' ? '💼 Experience' : '🎓 Education'}
+									🎓 Education
 								</span>
 
 								<!-- Title -->

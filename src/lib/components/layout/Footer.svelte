@@ -68,7 +68,7 @@
 							href={link.href}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="w-10 h-10 rounded-xl bg-(--bg-primary) flex items-center justify-center text-(--text-secondary) hover:text-white hover:gradient-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+							class="w-10 h-10 rounded-xl bg-(--bg-primary) flex items-center justify-center text-(--text-secondary) hover:text-white hover:bg-primary-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
 							aria-label={link.name}
 						>
 							{#if link.icon === 'github'}

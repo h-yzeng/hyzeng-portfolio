@@ -173,7 +173,7 @@
 			>
 				Get In <span class="gradient-text">Touch</span>
 			</h2>
-			<div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+			<div class="w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
 			<p class="mt-6 text-lg text-(--text-secondary) max-w-2xl mx-auto">
 				Have a project in mind or just want to chat? I'd love to hear from you!
 			</p>
@@ -241,6 +241,31 @@
 							<p class="text-(--text-primary) font-medium">Chicago, Illinois</p>
 						</div>
 					</div>
+
+					<a
+						href="/resume/Henry_Zeng_2025Resume.pdf"
+						download
+						class="flex items-center gap-4 p-4 rounded-xl bg-(--bg-primary) hover:bg-(--bg-tertiary) transition-colors group"
+					>
+						<div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shrink-0">
+							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<p class="text-sm text-(--text-tertiary)">Resume</p>
+							<p
+								class="text-(--text-primary) font-medium group-hover:text-primary-500 transition-colors"
+							>
+								Download PDF
+							</p>
+						</div>
+					</a>
 				</div>
 
 				<!-- Social Links -->
@@ -254,7 +279,7 @@
 								href={link.href}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="social-link w-12 h-12 rounded-xl bg-(--bg-primary) flex items-center justify-center text-(--text-secondary) hover:text-white hover:gradient-bg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+								class="social-link w-12 h-12 rounded-xl bg-(--bg-primary) flex items-center justify-center text-(--text-secondary) hover:text-white hover:bg-primary-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
 								aria-label={link.name}
 							>
 								{#if link.icon === 'github'}

@@ -14,7 +14,7 @@
 		{ href: '#projects', label: 'Projects' },
 		{ href: '#experience', label: 'Experience' },
 		{ href: '#contact', label: 'Contact' },
-		{ href: '/resume/Henry_Zeng_Resume.pdf', label: 'Resume', isDownload: true }
+		{ href: '/resume/Henry_Zeng_2025Resume.pdf', label: 'Resume', isDownload: true }
 	];
 
 	function handleScroll() {
@@ -73,7 +73,7 @@
 					>
 						{link.label}
 						<span
-							class="absolute -bottom-1 left-0 w-0 h-0.5 gradient-bg transition-all duration-300 group-hover:w-full"
+							class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"
 						></span>
 					</a>
 				{/each}
@@ -86,7 +86,7 @@
 					href="#contact"
 					class="px-5 py-2.5 rounded-full gradient-bg text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 				>
-					Hire Me
+					Contact
 				</a>
 			</div>
 
@@ -143,7 +143,7 @@
 						onclick={closeMobileMenu}
 						class="block w-full py-3 mt-4 rounded-xl gradient-bg text-white text-center font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500"
 					>
-						Hire Me
+						Contact
 					</a>
 				</div>
 			</div>

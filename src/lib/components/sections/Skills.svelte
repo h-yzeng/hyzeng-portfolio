@@ -135,7 +135,7 @@
 			<h2 id="skills-heading" class="skills-title text-4xl md:text-5xl font-display font-bold mb-4">
 				My <span class="gradient-text">Skills</span>
 			</h2>
-			<div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+			<div class="w-24 h-1 bg-primary-500 mx-auto rounded-full"></div>
 			<p class="mt-6 text-lg text-(--text-secondary) max-w-2xl mx-auto">
 				Technologies and tools I work with to bring ideas to life
 			</p>
@@ -149,7 +149,7 @@
 				>
 					<!-- Category Header -->
 					<div class="flex items-center gap-3 mb-6">
-						<div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
+						<div class="w-10 h-10 rounded-xl bg-primary-500 flex items-center justify-center">
 							{#if category.title === 'Languages'}
 								<svg
 									class="w-5 h-5 text-white"
@@ -214,7 +214,7 @@
 								</div>
 								<div class="h-2 bg-(--bg-tertiary) rounded-full overflow-hidden">
 									<div
-										class="skill-bar-fill h-full gradient-bg rounded-full origin-left"
+										class="skill-bar-fill h-full bg-primary-500 rounded-full origin-left"
 										style="width: {skill.level}%"
 									></div>
 								</div>

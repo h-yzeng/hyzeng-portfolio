@@ -3,7 +3,6 @@
 	import { gsap } from 'gsap';
 	import {
 		createAnimationContext,
-		heroTextReveal,
 		scrollIndicatorBounce,
 		prefersReducedMotion
 	} from '$lib/animations';
@@ -63,26 +62,16 @@
 			// Scroll indicator bounce
 			scrollIndicatorBounce('.scroll-indicator');
 
-			// Background gradient animation
-			gsap.to('.hero-gradient', {
-				backgroundPosition: '200% 50%',
-				duration: 10,
-				repeat: -1,
-				yoyo: true,
-				ease: 'sine.inOut'
-			});
-
-			// Floating shapes animation
+			// Floating shapes animation (subtle)
 			gsap.to('.floating-shape', {
-				y: 'random(-20, 20)',
-				x: 'random(-10, 10)',
-				rotation: 'random(-10, 10)',
-				duration: 'random(4, 6)',
+				y: 'random(-15, 15)',
+				x: 'random(-8, 8)',
+				duration: 'random(5, 8)',
 				repeat: -1,
 				yoyo: true,
 				ease: 'sine.inOut',
 				stagger: {
-					each: 0.5,
+					each: 0.8,
 					from: 'random'
 				}
 			});
@@ -100,23 +89,16 @@
 	class="relative min-h-screen flex items-center justify-center overflow-hidden"
 	aria-label="Hero section"
 >
-	<!-- Animated Background -->
-	<div
-		class="hero-gradient absolute inset-0 opacity-30 dark:opacity-20"
-		style="background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, var(--gradient-start) 100%); background-size: 200% 200%;"
-		aria-hidden="true"
-	></div>
-
 	<!-- Decorative Floating Shapes -->
 	<div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
 		<div
-			class="floating-shape absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary-500/10 blur-3xl"
+			class="floating-shape absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary-500/8 blur-3xl"
 		></div>
 		<div
-			class="floating-shape absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent-500/10 blur-3xl"
+			class="floating-shape absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-primary-400/8 blur-3xl"
 		></div>
 		<div
-			class="floating-shape absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-primary-400/10 blur-2xl"
+			class="floating-shape absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-primary-300/8 blur-2xl"
 		></div>
 	</div>
 
@@ -172,7 +154,7 @@
 					</svg>
 				</a>
 				<a
-					href="/resume/Henry_Zeng_Resume.pdf"
+					href="/resume/Henry_Zeng_2025Resume.pdf"
 					download
 					class="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-(--border-color) text-(--text-primary) font-semibold hover:border-primary-500 hover:text-primary-500 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
 				>

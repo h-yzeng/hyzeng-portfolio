@@ -2,28 +2,23 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
-	let isDark = $state(false);
+	let isDark = $state(true); // Default to dark mode
 
 	onMount(() => {
-		// Check for saved preference or system preference
+		// Check for saved preference, default to dark if no preference saved
 		const savedTheme = localStorage.getItem('theme');
-		const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-		if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-			isDark = true;
-			document.documentElement.classList.add('dark');
-		} else {
+		if (savedTheme === 'light') {
 			isDark = false;
 			document.documentElement.classList.remove('dark');
-		}
-
-		// Listen for system preference changes
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-			if (!localStorage.getItem('theme')) {
-				isDark = e.matches;
-				updateTheme();
+		} else {
+			// Default to dark mode
+			isDark = true;
+			document.documentElement.classList.add('dark');
+			if (!savedTheme) {
+				localStorage.setItem('theme', 'dark');
 			}
-		});
+		}
 	});
 
 	function toggleTheme() {
