@@ -8,38 +8,81 @@
 
 	let skillsSection: HTMLElement;
 	let ctx: gsap.Context;
+	let selectedCategory = $state<string>('All');
 
-	// [CUSTOMIZATION] - Add or modify skills in each category
+	// Skill categories based on resume and GitHub activity
 	const skillCategories = [
 		{
 			title: 'Languages',
+			icon: 'code',
 			skills: [
-				{ name: 'TypeScript', level: 90 },
-				{ name: 'JavaScript', level: 95 },
-				{ name: 'HTML', level: 95 },
-				{ name: 'CSS', level: 90 }
-				// [ADD MORE LANGUAGES HERE]
+				{ name: 'TypeScript', level: 85 }, // 5 GitHub projects, main language
+				{ name: 'JavaScript', level: 80 }, // Used across projects
+				{ name: 'HTML/CSS', level: 90 }, // Frontend development
+				{ name: 'Python', level: 70 }, // Listed in resume
+				{ name: 'Java', level: 65 }, // Retro-Minigames project
+				{ name: 'SQL', level: 75 } // Multiple databases
 			]
 		},
 		{
-			title: 'Frameworks',
+			title: 'Frameworks & Libraries',
+			icon: 'framework',
 			skills: [
-				{ name: 'Svelte', level: 85 },
-				{ name: 'React', level: 90 },
-				{ name: 'Vue.js', level: 75 }
-				// [ADD MORE FRAMEWORKS HERE]
+				{ name: 'React', level: 85 }, // Campus Market, resume projects
+				{ name: 'Next.js', level: 80 }, // TaskFlow project
+				{ name: 'Svelte/SvelteKit', level: 75 }, // Current portfolio
+				{ name: 'Vue.js', level: 70 }, // Recipe Explorer
+				{ name: 'TailwindCSS', level: 85 }, // Used in multiple projects
+				{ name: 'Express.js', level: 70 } // Backend framework
 			]
 		},
 		{
-			title: 'Tools',
+			title: 'Databases & Cloud',
+			icon: 'database',
 			skills: [
-				{ name: 'Git', level: 90 },
-				{ name: 'Figma', level: 80 },
-				{ name: 'Vite', level: 85 },
-				{ name: 'GSAP', level: 80 }
-				// [ADD MORE TOOLS HERE]
+				{ name: 'Firebase', level: 80 }, // Campus Market project
+				{ name: 'PostgreSQL', level: 75 }, // TaskFlow project
+				{ name: 'MongoDB', level: 70 }, // NoSQL experience
+				{ name: 'MySQL', level: 70 }, // Listed in resume
+				{ name: 'Git/GitHub', level: 95 } // Version control (all projects)
+			]
+		},
+		{
+			title: 'Tools & DevOps',
+			icon: 'tools',
+			skills: [
+				{ name: 'Docker', level: 70 }, // Resume: Cloud and DevOps
+				{ name: 'GitHub Actions', level: 75 }, // CI/CD in resume
+				{ name: 'AWS', level: 65 }, // Cloud platforms
+				{ name: 'Linux', level: 70 }, // DevOps in resume
+				{ name: 'GSAP', level: 75 } // Animation library (portfolio)
 			]
 		}
+	];
+
+	// Filter categories
+	const categories = ['All', 'Languages', 'Frameworks & Libraries', 'Databases & Cloud', 'Tools & DevOps'];
+
+	// Filtered skill categories
+	let filteredCategories = $derived(
+		selectedCategory === 'All'
+			? skillCategories
+			: skillCategories.filter((cat) => cat.title === selectedCategory)
+	);
+
+	// Additional skills from resume (not in main categories)
+	const additionalSkills = [
+		'Dart',
+		'Go',
+		'Flutter',
+		'FastAPI',
+		'Motion',
+		'Azure',
+		'Framer Motion',
+		'Drizzle ORM',
+		'NextAuth',
+		'TanStack Query',
+		'Zustand'
 	];
 
 	onMount(() => {
@@ -57,6 +100,24 @@
 					ease: 'power3.out',
 					scrollTrigger: {
 						trigger: '.skills-title',
+						start: 'top 85%',
+						toggleActions: 'play none none reverse'
+					}
+				}
+			);
+
+			// Filter buttons animation
+			gsap.fromTo(
+				'.filter-button',
+				{ opacity: 0, y: 20 },
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.5,
+					stagger: 0.05,
+					ease: 'power2.out',
+					scrollTrigger: {
+						trigger: '.filter-container',
 						start: 'top 85%',
 						toggleActions: 'play none none reverse'
 					}
@@ -141,16 +202,32 @@
 			</p>
 		</div>
 
+		<!-- Category Filters -->
+		<div class="filter-container flex flex-wrap justify-center gap-3 mb-12">
+			{#each categories as category}
+				<button
+					class="filter-button px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 {selectedCategory ===
+					category
+						? 'bg-primary-500 text-white shadow-lg'
+						: 'bg-(--bg-secondary) text-(--text-secondary) hover:bg-primary-500/10 hover:text-primary-500'}"
+					onclick={() => (selectedCategory = category)}
+					aria-pressed={selectedCategory === category}
+				>
+					{category}
+				</button>
+			{/each}
+		</div>
+
 		<!-- Skills Grid -->
 		<div class="skills-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each skillCategories as category}
+			{#each filteredCategories as category}
 				<div
 					class="skill-category bg-(--bg-secondary) rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
 				>
 					<!-- Category Header -->
 					<div class="flex items-center gap-3 mb-6">
 						<div class="w-10 h-10 rounded-xl bg-primary-500 flex items-center justify-center">
-							{#if category.title === 'Languages'}
+							{#if category.icon === 'code'}
 								<svg
 									class="w-5 h-5 text-white"
 									fill="none"
@@ -164,7 +241,7 @@
 										d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
 									/>
 								</svg>
-							{:else if category.title === 'Frameworks'}
+							{:else if category.icon === 'framework'}
 								<svg
 									class="w-5 h-5 text-white"
 									fill="none"
@@ -176,6 +253,20 @@
 										stroke-linejoin="round"
 										stroke-width="2"
 										d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+									/>
+								</svg>
+							{:else if category.icon === 'database'}
+								<svg
+									class="w-5 h-5 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
 									/>
 								</svg>
 							{:else}
@@ -231,7 +322,7 @@
 				Also experienced with
 			</h3>
 			<div class="flex flex-wrap justify-center gap-3">
-				{#each ['REST APIs', 'GraphQL', 'Firebase', 'PostgreSQL', 'Docker', 'CI/CD', 'Responsive Design', 'Accessibility', 'Performance Optimization', 'SEO'] as tag}
+				{#each additionalSkills as tag}
 					<span
 						class="px-4 py-2 bg-(--bg-secondary) text-(--text-secondary) rounded-full text-sm font-medium hover:bg-primary-500/10 hover:text-primary-500 transition-colors duration-300"
 					>
