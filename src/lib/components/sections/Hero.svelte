@@ -106,12 +106,13 @@
 				👋 Hello, I'm
 			</p>
 
-		<!-- Name -->
-		<h1
-			class="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6 opacity-0 leading-tight py-2"
-		>
-			<span class="gradient-text">Henry Zeng</span>
-		</h1>			<!-- Title -->
+			<!-- Name -->
+			<h1
+				class="hero-name text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6 opacity-0 leading-tight py-2"
+			>
+				<span class="gradient-text">Henry Zeng</span>
+			</h1>
+			<!-- Title -->
 			<h2
 				class="hero-title text-2xl sm:text-3xl md:text-4xl font-display font-medium text-(--text-primary) mb-6 opacity-0"
 			>
@@ -122,8 +123,9 @@
 			<p
 				class="hero-tagline text-lg md:text-xl text-(--text-secondary) max-w-2xl mx-auto mb-10 opacity-0"
 			>
-				I study Information Technology and Management in Chicago, Illinois.
-				Currently finishing my Bachelor's and Master's Degree with a specialization in Web Development and Minor in Software Engineering.
+				I study Information Technology and Management in Chicago, Illinois. Currently finishing my
+				Bachelor's and Master's Degree with a specialization in Web Development and Minor in
+				Software Engineering.
 			</p>
 
 			<!-- CTA Buttons -->

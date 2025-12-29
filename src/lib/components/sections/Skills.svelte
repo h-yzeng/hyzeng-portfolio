@@ -44,7 +44,7 @@
 				{ name: 'Firebase', level: 80 }, // Campus Market project
 				{ name: 'PostgreSQL', level: 25 }, // TaskFlow project
 				{ name: 'MongoDB', level: 10 }, // NoSQL experience
-				{ name: 'MySQL', level: 10 }, // Listed in resume
+				{ name: 'MySQL', level: 10 } // Listed in resume
 			]
 		},
 		{
@@ -54,13 +54,19 @@
 				{ name: 'GitHub Actions', level: 85 }, // CI/CD in resume
 				{ name: 'Docker', level: 30 }, // Resume: Cloud and DevOps
 				{ name: 'AWS', level: 5 }, // Cloud platforms
-				{ name: 'Linux', level: 10 }, // DevOps in resume
+				{ name: 'Linux', level: 10 } // DevOps in resume
 			]
 		}
 	];
 
 	// Filter categories
-	const categories = ['All', 'Languages', 'Frameworks & Libraries', 'Databases & Cloud', 'Tools & DevOps'];
+	const categories = [
+		'All',
+		'Languages',
+		'Frameworks & Libraries',
+		'Databases & Cloud',
+		'Tools & DevOps'
+	];
 
 	// Filtered skill categories
 	let filteredCategories = $derived(

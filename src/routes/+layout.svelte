@@ -32,7 +32,10 @@
 		content="Full-Stack Web Developer based in Chicago, Illinois. Building elegant, performant, and accessible web experiences."
 	/>
 	<meta name="author" content="Henry Zeng" />
-	<meta name="keywords" content="Full-Stack Developer, Web Developer, React, TypeScript, SvelteKit, Next.js, Chicago, Software Engineer" />
+	<meta
+		name="keywords"
+		content="Full-Stack Developer, Web Developer, React, TypeScript, SvelteKit, Next.js, Chicago, Software Engineer"
+	/>
 	<link rel="canonical" href="https://hyzeng-portfolio.vercel.app" />
 
 	<!-- Open Graph / Facebook -->
@@ -75,10 +78,7 @@
 				"addressRegion": "IL",
 				"addressCountry": "US"
 			},
-			"sameAs": [
-				"https://github.com/h-yzeng",
-				"https://www.linkedin.com/in/henry-zeng-/"
-			],
+			"sameAs": ["https://github.com/h-yzeng", "https://www.linkedin.com/in/henry-zeng-/"],
 			"alumniOf": {
 				"@type": "EducationalOrganization",
 				"name": "Illinois Institute of Technology"
@@ -114,9 +114,7 @@
 </svelte:head>
 
 <!-- Skip to main content link for accessibility -->
-<a href="#main-content" class="sr-only">
-	Skip to main content
-</a>
+<a href="#main-content" class="sr-only"> Skip to main content </a>
 
 <!-- Loading Bar -->
 {#if isLoading}
@@ -130,7 +128,11 @@
 	</div>
 {/if}
 
-<div class="min-h-screen flex flex-col {showContent ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500">
+<div
+	class="min-h-screen flex flex-col {showContent
+		? 'opacity-100'
+		: 'opacity-0'} transition-opacity duration-500"
+>
 	<Header />
 	<main id="main-content" class="flex-1">
 		{@render children()}

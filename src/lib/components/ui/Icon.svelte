@@ -2,7 +2,11 @@
 	type IconType = 'github' | 'linkedin' | 'email' | 'external' | 'arrow-down';
 	type IconSize = 'sm' | 'md' | 'lg';
 
-	let { type, size = 'md', class: className = '' }: { type: IconType; size?: IconSize; class?: string } = $props();
+	let {
+		type,
+		size = 'md',
+		class: className = ''
+	}: { type: IconType; size?: IconSize; class?: string } = $props();
 
 	const sizeClasses = {
 		sm: 'w-4 h-4',

@@ -19,8 +19,8 @@
 				'Campus Night Market is a campus late-night food exchange, built specifically for IIT students.',
 			tech: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'Firebase'],
 			github: 'https://github.com/h-yzeng/campus-nightmarket',
-			live: 'https://campus-nightmarket.vercel.app/', 
-			image: '/images/projects/campus-night-market.jpg' 
+			live: 'https://campus-nightmarket.vercel.app/',
+			image: '/images/projects/campus-night-market.jpg'
 		},
 		{
 			name: 'MoodBoard',
@@ -28,7 +28,7 @@
 				'MoodBoard is a mood tracking app that helps users log daily emotions, reflect on experiences, and visualize mood trends.',
 			tech: ['React', 'JavaScript', 'TailwindCSS', 'Vite'],
 			github: 'https://github.com/h-yzeng/Moodboard',
-			live: 'https://mood-board-tracking-app.vercel.app/', 
+			live: 'https://mood-board-tracking-app.vercel.app/',
 			image: '/images/projects/moodboard.jpg'
 		},
 		{
@@ -130,7 +130,11 @@
 		</div>
 
 		<!-- Technology Filters -->
-		<div class="mb-12 flex flex-wrap justify-center gap-3" role="group" aria-label="Filter projects by technology">
+		<div
+			class="mb-12 flex flex-wrap justify-center gap-3"
+			role="group"
+			aria-label="Filter projects by technology"
+		>
 			{#each filters as filter}
 				<button
 					onclick={() => setFilter(filter)}

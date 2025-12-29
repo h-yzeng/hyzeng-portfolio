@@ -110,21 +110,21 @@
 
 				<!-- [PLACEHOLDER] - Replace this bio with your own story -->
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
-					I enjoy creating beautiful and functional web applications that solve
-					real-world problems. With a creative eye for design and a love for clean code, I connect the
-					gap between aesthetics and functionality.
+					I enjoy creating beautiful and functional web applications that solve real-world problems.
+					With a creative eye for design and a love for clean code, I connect the gap between
+					aesthetics and functionality.
 				</p>
 
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
 					When I'm not coding, you can find me exploring new technologies, thinking about new
-					projects ideas, or sharing my knowledge with other developers. I believe in
-					continuous learning and pushing the boundaries of what's possible to design.
+					projects ideas, or sharing my knowledge with other developers. I believe in continuous
+					learning and pushing the boundaries of what's possible to design.
 				</p>
 
 				<p class="text-lg text-(--text-secondary) leading-relaxed">
 					What drives me is the ability to turn complex problems into stylish solutions. I'm always
-					excited to take on new challenges and collaborate with other creatives who share
-					my passion for designing.
+					excited to take on new challenges and collaborate with other creatives who share my
+					passion for designing.
 				</p>
 
 				<!-- Quick Info -->
@@ -198,9 +198,7 @@
 			<!-- Visual Graphic -->
 			<div class="about-graphic relative">
 				<!-- Abstract Shape Container -->
-				<div
-					class="relative aspect-square max-w-md mx-auto bg-primary-500/5 rounded-3xl p-8"
-				>
+				<div class="relative aspect-square max-w-md mx-auto bg-primary-500/5 rounded-3xl p-8">
 					<!-- Decorative Border -->
 					<div class="absolute inset-0 rounded-3xl gradient-border"></div>
 

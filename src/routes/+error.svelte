@@ -55,10 +55,7 @@
 
 		<!-- Decorative Elements -->
 		<div class="mt-16 relative">
-			<div
-				class="absolute inset-0 flex items-center justify-center opacity-5"
-				aria-hidden="true"
-			>
+			<div class="absolute inset-0 flex items-center justify-center opacity-5" aria-hidden="true">
 				<svg class="w-96 h-96" viewBox="0 0 24 24" fill="currentColor">
 					<path
 						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
