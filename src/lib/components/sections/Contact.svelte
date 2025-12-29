@@ -4,6 +4,7 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { createAnimationContext, prefersReducedMotion, magneticButton } from '$lib/animations';
 	import { SOCIAL_LINKS } from '$lib/config/social';
+	import { PUBLIC_FORMSPREE_ID } from '$env/static/public';
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -113,8 +114,7 @@
 
 		try {
 			// FormSpree endpoint using environment variable
-			const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID;
-			const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+			const response = await fetch(`https://formspree.io/f/${PUBLIC_FORMSPREE_ID}`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
