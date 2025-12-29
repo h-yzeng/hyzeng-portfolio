@@ -1,12 +1,17 @@
+<div align="center">
+
 # Henry Zeng - Portfolio
 
 [![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white)](https://kit.svelte.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GSAP](https://img.shields.io/badge/GSAP-93CF2B?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
 
 Modern, animated portfolio showcasing web development projects and skills. Built with SvelteKit 5, TailwindCSS v4, and GSAP animations.
 
-**[Live Demo](https://hyzeng-portfolio.vercel.app)**
+**[Live Demo](https://hzeng.tech)**
+
+</div>
 
 ---
 
