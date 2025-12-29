@@ -10,4 +10,9 @@ declare global {
 	}
 }
 
+declare module '$env/static/public' {
+	export const PUBLIC_FORMSPREE_ID: string;
+	export const PUBLIC_GA_MEASUREMENT_ID: string;
+}
+
 export {};
