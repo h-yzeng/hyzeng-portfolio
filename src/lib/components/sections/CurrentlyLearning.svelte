@@ -18,16 +18,16 @@
 			icon: '📘'
 		},
 		{
-			name: 'System Design',
-			description: 'Learning scalable architecture patterns',
+			name: 'Networking',
+			description: 'Understanding network protocols and architecture',
 			progress: 60,
-			icon: '🏗️'
+			icon: '🌐'
 		},
 		{
-			name: 'Next.js 15',
-			description: 'Exploring the latest features and App Router',
-			progress: 85,
-			icon: '⚡'
+			name: 'Operating Systems',
+			description: 'Exploring OS fundamentals and system internals',
+			progress: 50,
+			icon: '💻'
 		}
 	];
 

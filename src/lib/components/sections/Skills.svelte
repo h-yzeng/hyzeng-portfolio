@@ -16,46 +16,45 @@
 			title: 'Languages',
 			icon: 'code',
 			skills: [
-				{ name: 'TypeScript', level: 85 }, // 5 GitHub projects, main language
-				{ name: 'JavaScript', level: 80 }, // Used across projects
 				{ name: 'HTML/CSS', level: 90 }, // Frontend development
-				{ name: 'Python', level: 70 }, // Listed in resume
-				{ name: 'Java', level: 65 }, // Retro-Minigames project
-				{ name: 'SQL', level: 75 } // Multiple databases
+				{ name: 'TypeScript', level: 90 }, // 5 GitHub projects, main language
+				{ name: 'JavaScript', level: 50 }, // Used across projects
+				{ name: 'Python', level: 15 }, // Listed in resume
+				{ name: 'Java', level: 15 }, // Retro-Minigames project
+				{ name: 'SQL', level: 5 } // Multiple databases
 			]
 		},
 		{
 			title: 'Frameworks & Libraries',
 			icon: 'framework',
 			skills: [
-				{ name: 'React', level: 85 }, // Campus Market, resume projects
-				{ name: 'Next.js', level: 80 }, // TaskFlow project
-				{ name: 'Svelte/SvelteKit', level: 75 }, // Current portfolio
-				{ name: 'Vue.js', level: 70 }, // Recipe Explorer
+				{ name: 'React', level: 90 }, // Campus Market, resume projects
 				{ name: 'TailwindCSS', level: 85 }, // Used in multiple projects
-				{ name: 'Express.js', level: 70 } // Backend framework
+				{ name: 'Svelte/SvelteKit', level: 25 }, // Current portfolio
+				{ name: 'Next.js', level: 20 }, // TaskFlow project
+				{ name: 'Vue.js', level: 15 }, // Recipe Explorer
+				{ name: 'Express.js', level: 10 } // Backend framework
 			]
 		},
 		{
 			title: 'Databases & Cloud',
 			icon: 'database',
 			skills: [
+				{ name: 'Git/GitHub', level: 100 }, // Version control (all projects)
 				{ name: 'Firebase', level: 80 }, // Campus Market project
-				{ name: 'PostgreSQL', level: 75 }, // TaskFlow project
-				{ name: 'MongoDB', level: 70 }, // NoSQL experience
-				{ name: 'MySQL', level: 70 }, // Listed in resume
-				{ name: 'Git/GitHub', level: 95 } // Version control (all projects)
+				{ name: 'PostgreSQL', level: 25 }, // TaskFlow project
+				{ name: 'MongoDB', level: 10 }, // NoSQL experience
+				{ name: 'MySQL', level: 10 }, // Listed in resume
 			]
 		},
 		{
 			title: 'Tools & DevOps',
 			icon: 'tools',
 			skills: [
-				{ name: 'Docker', level: 70 }, // Resume: Cloud and DevOps
-				{ name: 'GitHub Actions', level: 75 }, // CI/CD in resume
-				{ name: 'AWS', level: 65 }, // Cloud platforms
-				{ name: 'Linux', level: 70 }, // DevOps in resume
-				{ name: 'GSAP', level: 75 } // Animation library (portfolio)
+				{ name: 'GitHub Actions', level: 85 }, // CI/CD in resume
+				{ name: 'Docker', level: 30 }, // Resume: Cloud and DevOps
+				{ name: 'AWS', level: 5 }, // Cloud platforms
+				{ name: 'Linux', level: 10 }, // DevOps in resume
 			]
 		}
 	];
@@ -74,9 +73,9 @@
 	const additionalSkills = [
 		'Dart',
 		'Go',
+		'GSAP',
 		'Flutter',
 		'FastAPI',
-		'Motion',
 		'Azure',
 		'Framer Motion',
 		'Drizzle ORM',
